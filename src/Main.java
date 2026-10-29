@@ -1,15 +1,35 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+    public static void main(String[] args) {
+
+        Car car = new Car("Civic", "Honda", 2022, 25000.0, "Black", 5);
+
+        System.out.println("Initial car information:");
+        System.out.println(car.toString());
+
+        car.sell();
+
+        System.out.println("\nAfter selling one car:");
+
+        System.out.println("Model: " + car.getModel());
+        System.out.println("Brand: " + car.getBrand());
+        System.out.println("Year: " + car.getYear());
+        System.out.println("Price: " + car.getPrice());
+        System.out.println("Color: " + car.getColor());
+        System.out.println("Quantity: " + car.getQuantity());
+
+        car.setModel("Corolla");
+        car.setBrand("Toyota");
+        car.setYear(2025);
+        car.setPrice(30000.0);
+        car.setColor("White");
+
+        System.out.println("\nUpdated car information:");
+        System.out.println(car.toString());
+
+        car.delivery();
+
+        System.out.println("\nAfter delivering one car:");
+        System.out.println(car.toString());
     }
 }
